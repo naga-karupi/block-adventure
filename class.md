@@ -50,7 +50,7 @@ class ICharacter {
 }
 
 class PlayerStatus {
-    Array<Pair<IBlock, int>> has_blocks
+    Array<"Pair<"IBlock, int">"> has_blocks
 }
 
 class Player {
@@ -109,8 +109,8 @@ class StageHandler {
     string stage_name
 
     Player player
-    Array<IEnemy> enemies;
-    Array<Array<IBlock>> blocks; 
+    Array<"IEnemy"> enemies;
+    Array<"Array<"IBlock">"> blocks; 
 
     ReadStageData()
     CreateStage()
@@ -132,4 +132,6 @@ IEnemy<--StageHandler
 
 ## メモ
 
-ステージ名とかをハッシュにすると検索が高速になるからそっちに置き換えを検討
+ステージ名とかをハッシュにすると検索が高速になるからそっちに置き換えを検討  
+なんか`<>`の中が見えなくなるからダブルクォーテーションを付けることで一時的に対策  
+いい方法があったら即切り替える予定
