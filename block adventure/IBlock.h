@@ -11,6 +11,7 @@ public:
 	bool destroyable;
 
 	IBlock(String , bool);
+
 	[[nodiscard]]
 	constexpr bool operator == (IBlock&) const noexcept;
 
@@ -22,7 +23,7 @@ public:
 	virtual bool Collide() = 0;
 	virtual void TouchEvent() = 0;
 	virtual void DestroyEvent() = 0;
-	virtual void BlockDraw() = 0;
+	virtual void Draw() const= 0;
 
 	IBlock() = delete;
 };
